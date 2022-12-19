@@ -1,0 +1,19 @@
+spring:
+  sql:
+    init:
+      platform: h2
+  datasource:
+    url: jdbc:h2:mem:movie;DATABASE_TO_UPPER=false;MODE=MySQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: create
