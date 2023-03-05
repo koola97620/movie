@@ -1,4 +1,4 @@
-package com.example.movie.app;
+package com.example.movie.pay.app;
 
 import lombok.Builder;
 

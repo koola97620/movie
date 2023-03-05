@@ -1,11 +1,8 @@
-package com.example.movie.infra;
+package com.example.movie.pay.infra;
 
-import com.example.movie.app.PaymentRequest;
+import com.example.movie.pay.app.PaymentRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
-import java.util.Optional;
 
 @Service
 public class KakaopayApiService {

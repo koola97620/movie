@@ -1,4 +1,4 @@
-package com.example.movie.infra;
+package com.example.movie.pay.infra;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package com.example.movie.app;
+package com.example.movie.pay.app;
 
 public record PaymentResponse(
         Long payId,

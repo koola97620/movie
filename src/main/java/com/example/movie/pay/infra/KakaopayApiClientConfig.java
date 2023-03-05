@@ -1,4 +1,4 @@
-package com.example.movie.infra;
+package com.example.movie.pay.infra;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,7 +17,6 @@ import io.github.resilience4j.feign.Resilience4jFeign;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.core.KafkaOperations;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;

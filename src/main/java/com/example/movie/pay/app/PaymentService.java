@@ -1,7 +1,7 @@
-package com.example.movie.app;
+package com.example.movie.pay.app;
 
-import com.example.movie.infra.KakaopayApiService;
-import com.example.movie.infra.KakaopayReadyApiResponse;
+import com.example.movie.pay.infra.KakaopayApiService;
+import com.example.movie.pay.infra.KakaopayReadyApiResponse;
 import org.springframework.stereotype.Service;
 
 @Service

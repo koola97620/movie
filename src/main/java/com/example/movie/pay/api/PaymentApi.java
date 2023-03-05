@@ -1,7 +1,7 @@
-package com.example.movie.api;
+package com.example.movie.pay.api;
 
-import com.example.movie.app.PaymentRequest;
-import com.example.movie.app.PaymentService;
+import com.example.movie.pay.app.PaymentRequest;
+import com.example.movie.pay.app.PaymentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

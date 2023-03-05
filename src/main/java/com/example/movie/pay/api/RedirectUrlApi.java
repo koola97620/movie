@@ -1,4 +1,4 @@
-package com.example.movie.api;
+package com.example.movie.pay.api;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
