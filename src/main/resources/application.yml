@@ -24,3 +24,5 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
+    root: debug
+

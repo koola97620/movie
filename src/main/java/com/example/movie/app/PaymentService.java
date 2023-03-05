@@ -16,6 +16,6 @@ public class PaymentService {
     public PaymentResponse payment(PaymentRequest req) {
         KakaopayReadyApiResponse ready = apiService.ready(req);
 
-        return new PaymentResponse(null,null);
+        return new PaymentResponse(null,ready.next_redirect_pc_url());
     }
 }

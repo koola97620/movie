@@ -4,6 +4,9 @@ import com.example.movie.app.PaymentRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+import java.util.Optional;
+
 @Service
 public class KakaopayApiService {
 
@@ -25,17 +28,18 @@ public class KakaopayApiService {
                 .item_name(req.productName())
                 .quantity(req.quantity())
                 .total_amount(req.amount())
-                .approval_url("http://localhost:7001/extsvc/success")
-                .cancel_url("http://localhost:7001/extsvc/success")
-                .fail_url("http://localhost:7001/extsvc/success")
+                .approval_url("http://localhost:8080/extsvc/success")
+                .cancel_url("http://localhost:8080/extsvc/success")
+                .fail_url("http://localhost:8080/extsvc/success")
                 .payment_method_type(choosePaymentMethodType(req.paymentMethodType()))
                 .install_month(req.installMonth())
+                .tax_free_amount(0)
                 .build();
-        KakaopayReadyApiResponse response = apiClient.ready(adminKey, readyApiRequest);
-        return response;
+        KakaopayReadyApiResponse respopnse = apiClient.ready(adminKey, readyApiRequest);
+        return respopnse;
     }
 
     private String choosePaymentMethodType(String paymentMethodType) {
-        return PaymentMethodType.of(paymentMethodType).name();
+        return PaymentMethodType.of(paymentMethodType).getCode();
     }
 }
