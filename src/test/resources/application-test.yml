@@ -17,3 +17,10 @@ spring:
         format_sql: true
     hibernate:
       ddl-auto: create
+  profiles:
+    include: test-api
+
+
+kafka:
+  bootstrapAddress: localhost:9092
+
