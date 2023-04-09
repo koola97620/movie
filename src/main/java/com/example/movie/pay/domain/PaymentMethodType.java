@@ -1,4 +1,4 @@
-package com.example.movie.pay.infra;
+package com.example.movie.pay.domain;
 
 import org.springframework.util.ObjectUtils;
 
@@ -7,7 +7,8 @@ import java.util.Arrays;
 public enum PaymentMethodType {
     CARD("CARD"),
     MONEY("MONEY"),
-    ALL(null);
+    ALL(null)
+    ;
 
     private String code;
 
@@ -25,7 +26,7 @@ public enum PaymentMethodType {
         }
 
         return Arrays.stream(values())
-                .filter(e -> e.getCode().equals(type))
+                .filter(e -> e.name().equals(type))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(""));
     }

@@ -1,7 +1,14 @@
 package com.example.movie.pay.app;
 
+import lombok.Builder;
+
 public record PaymentResponse(
         Long payId,
-        String url
+        String tid,
+        Long orderId,
+        Integer payAmount,
+        String pcUrl
 ) {
+    @Builder
+    public PaymentResponse {}
 }

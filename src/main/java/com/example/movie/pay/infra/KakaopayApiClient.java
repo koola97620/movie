@@ -1,5 +1,6 @@
 package com.example.movie.pay.infra;
 
+import com.example.movie.pay.app.PaymentResultResponse;
 import feign.Headers;
 import feign.Param;
 import feign.RequestLine;
@@ -9,4 +10,7 @@ public interface KakaopayApiClient {
 
     @RequestLine("POST /v1/payment/ready")
     KakaopayReadyApiResponse ready(@Param("Authorization") String adminKey, KakaopayReadyApiRequest request);
+
+    @RequestLine("POST /v1/payment/approve")
+    PaymentResultResponse approve(@Param("Authorization") String adminKey, KakaopayApproveApiRequest request);
 }

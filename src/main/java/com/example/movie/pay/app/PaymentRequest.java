@@ -9,7 +9,8 @@ public record PaymentRequest(
         Integer quantity,
         Integer amount,
         String paymentMethodType,
-        Integer installMonth
+        Integer installMonth,
+        Integer taxFreeAmount
 ) {
     @Builder
     public PaymentRequest {}

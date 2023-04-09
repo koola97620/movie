@@ -1,8 +1,9 @@
 package com.example.movie.pay.api;
 
 import com.example.movie.pay.app.PaymentRequest;
-import com.example.movie.pay.app.PaymentService;
-import org.springframework.http.ResponseEntity;
+import com.example.movie.pay.app.PaymentRequestService;
+import com.example.movie.pay.common.ApiResponse;
+import com.example.movie.pay.exception.KakaopayApiCode;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaymentApi {
 
-    private final PaymentService service;
+    private final PaymentRequestService service;
 
-    public PaymentApi(PaymentService service) {
+    public PaymentApi(PaymentRequestService service) {
         this.service = service;
     }
 
     @PostMapping("/intsvc/homepage/payment_kakaopay/v1/payment")
-    public ResponseEntity<?> payment(@RequestBody PaymentRequest req) {
-        return ResponseEntity.ok(service.payment(req));
+    public ApiResponse<?> paymentRequest(@RequestBody PaymentRequest req) {
+        return ApiResponse.of(KakaopayApiCode.SUCCESS.getCode(), "정상적으로 처리하였습니다.", service.paymentRequest(req));
     }
 }
