@@ -1,0 +1,10 @@
+{
+  "tid":"T41a59d45b8c2c02d7df",
+  "tms_result":false,
+  "next_redirect_app_url":"https://online-pay.kakao.com/mockup/v1/69137840d93f62a9738b03b0fd000ab914302e894b0d9c59ae3a2a6702c2d33f/aInfo",
+  "next_redirect_mobile_url":"https://online-pay.kakao.com/mockup/v1/69137840d93f62a9738b03b0fd000ab914302e894b0d9c59ae3a2a6702c2d33f/mInfo",
+  "next_redirect_pc_url":"https://online-pay.kakao.com/mockup/v1/69137840d93f62a9738b03b0fd000ab914302e894b0d9c59ae3a2a6702c2d33f/info",
+  "android_app_scheme":"kakaotalk://kakaopay/pg?url=https://online-pay.kakao.com/pay/mockup/69137840d93f62a9738b03b0fd000ab914302e894b0d9c59ae3a2a6702c2d33f",
+  "ios_app_scheme":"kakaotalk://kakaopay/pg?url=https://online-pay.kakao.com/pay/mockup/69137840d93f62a9738b03b0fd000ab914302e894b0d9c59ae3a2a6702c2d33f",
+  "created_at":"2023-04-09T10:28:52"
+}
