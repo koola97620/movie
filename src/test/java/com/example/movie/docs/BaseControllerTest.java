@@ -23,7 +23,7 @@ import static org.springframework.restdocs.restassured3.RestAssuredRestDocumenta
 @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ExtendWith({RestDocumentationExtension.class, SpringExtension.class})
+@ExtendWith({RestDocumentationExtension.class})
 public class BaseControllerTest {
     //protected static final String DEFAULT_RESTDOC_PATH = "{class_name}/{method_name}/";
 

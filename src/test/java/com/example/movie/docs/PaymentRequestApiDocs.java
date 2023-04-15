@@ -60,9 +60,9 @@ public class PaymentRequestApiDocs extends BaseControllerTest {
     @DisplayName("단건결제 API")
     @Test
     void single_success() {
-        readyPayment("payment-request.json");
+        카카오결제준비API요청Mock("payment-request.json");
 
-        ExtractableResponse<Response> response = requestPayment();
+        ExtractableResponse<Response> response = 결제요청();
 
         String rescd = response.jsonPath().getObject("rescd", String.class);
         assertThat(rescd).isEqualTo("00");
@@ -70,7 +70,7 @@ public class PaymentRequestApiDocs extends BaseControllerTest {
         assertThat(resultInfo.pcUrl()).isEqualTo("https://online-pay.kakao.com/mockup/v1/69137840d93f62a9738b03b0fd000ab914302e894b0d9c59ae3a2a6702c2d33f/info");
     }
 
-    public ExtractableResponse<Response> requestPayment() {
+    public ExtractableResponse<Response> 결제요청() {
         PaymentRequest req = PaymentRequest.builder()
                 .orderId(1L)
                 .userId(1)
@@ -109,7 +109,7 @@ public class PaymentRequestApiDocs extends BaseControllerTest {
         return response;
     }
 
-    private void readyPayment(String responseJson) {
+    private void 카카오결제준비API요청Mock(String responseJson) {
         mockServer.stubFor(
                 WireMock.post("/v1/payment/ready")
                         .willReturn(aResponse()
