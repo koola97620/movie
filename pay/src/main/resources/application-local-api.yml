@@ -1,0 +1,10 @@
+spring:
+  config:
+    activate:
+      on-profile: "local"
+
+kakaopay:
+  admin-key: 824c4f0a812a1d5f2cbdeb06e9f27ca6
+  host: https://kapi.kakao.com
+  cid: TC0ONETIME
+  redirect-url-host: http://localhost:8080

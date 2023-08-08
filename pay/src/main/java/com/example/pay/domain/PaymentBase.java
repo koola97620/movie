@@ -19,7 +19,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(catalog = "paydb", name = "payment_base")
+@Table(name = "payment_base")
 public class PaymentBase extends BaseEntity {
     @Id
     @Column(name = "id")

@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(catalog = "paydb", name = "payment_results")
+@Table(name = "payment_results")
 @DynamicInsert
 public class PaymentResult extends BaseEntity {
     @Id
