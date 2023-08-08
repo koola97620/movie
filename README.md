@@ -1,11 +1,6 @@
-# 설정
+# 연습용 프로젝트
 
-프로젝트를 실행시키기 위해서 아래 파일을 만들고 설정을 추가해야 한다.
-- /src/main/resources/application-local-api.yml
-- /src/test/resources/application-test-api.yml
-```yaml
-kakaopay:
-  admin-key: 카카오 어플리케이션 Admin 키 
-  host: https://kapi.kakao.com
-  cid: 가맹점 코드 (테스트 : TC0ONETIME)
-```
+## 구성
+ 이 프로젝트는 멀티모듈로 구성됨
+- pay 모듈
+- ??? 모듈
